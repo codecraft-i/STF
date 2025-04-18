@@ -63,4 +63,17 @@
       font-size: 20px;
     }
   }
-  
+
+.carousel {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none; /* Chrome, Safari va Edge uchun yashiradi */
+}
+
+.carousel {
+  -ms-overflow-style: none;  /* IE 10+ uchun */
+  scrollbar-width: none;     /* Firefox uchun */
+}

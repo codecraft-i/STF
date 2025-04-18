@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import React, { useEffect,  } from 'react';
+import { useNavigate } from "react-router-dom";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './TopUni.css';
@@ -35,14 +36,20 @@ const TopUni = () => {
     AOS.init({ duration: 800, once: true });
   }, []);
 
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/universities");
+  };
+
   return (
-    <section className="game-section">
+    <section className="game-section" style={{ margin: "30px 0" }}>
       <div className="game-header">
         <div>
-          <p className="top-text">TOP GAMES</p>
-          <h2>Most Played</h2>
+          <p className="top-text">Universitetlar</p>
+          <h2 style={{ color: "#eee" }}>Mashxur Universitetlar</h2>
         </div>
-        <button className="view-all">VIEW ALL</button>
+        <button className="view-all" onClick={ handleClick }>Barchasi</button>
       </div>
 
       <div className="game-cards">

@@ -25,6 +25,9 @@ import visa4 from "@assets/HomeAssests/visa4.jpg";
 import visa5 from "@assets/HomeAssests/visa5.jpg";
 import visa6 from "@assets/HomeAssests/visa6.jpg";
 
+import ContactSection from "@components/ContactSection/ContactSection"
+import Footer from "@components/Footer/Footer"
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -100,6 +103,9 @@ const Home = () => {
                     ))}
                   </div>
                 </div>
+              
+              <ContactSection />
+              <Footer />
             </div>
       </div>
     );

@@ -32,8 +32,8 @@
 }
 
 .card-button {
-  background-color: #f5decb;
-  color: black;
+  background-color: #ff5e68;
+  color: #eee;
   text-align: center;
   padding: 0.75rem;
   border-radius: 9999px;
@@ -42,7 +42,7 @@
 }
 
 .card-button:hover {
-  background-color: #ebcfbc;
+  background-color: #ff7780;
 }
 
 /* Responsive tweaks */
@@ -61,5 +61,11 @@
 @media (min-width: 1024px) {
   .card {
     max-width: 600px;
+  }
+}
+
+@media (max-width: 600px) {
+  #title-services {
+    font-size: 0.8rem !important;
   }
 }

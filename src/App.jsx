@@ -12,6 +12,11 @@ import Home from './Pages/Home/Home';
 import Universities from './Pages/Internal/Uni/Universities';
 import University from './Pages/Internal/Uni/University';
 
+import Bachelor from './Pages/Studies/Bachelor';
+import LanguageCourse from './Pages/Studies/LanguageCourse';
+import Master from './Pages/Studies/Master';
+import VocationalEducation from './Pages/Studies/VocationalEducation';
+
 
 function App() {
   return (
@@ -21,6 +26,11 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/universities" element={<Universities />} />
           <Route path="/universities/university/:university_name" element={<University />} />
+
+          <Route path="/bachelor" element={<Bachelor />} />
+          <Route path="/languagecourse" element={<LanguageCourse />} />
+          <Route path="/master" element={<Master />} />
+          <Route path="/vocationaleducation" element={<VocationalEducation />} />
         </Routes>
       </Router>
     </>

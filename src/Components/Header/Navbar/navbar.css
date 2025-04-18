@@ -1,10 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+
 .NavbarActive {
-    color: red;
+    color: #fff;
+    background: #cb9f27 !important;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 500;
+    text-decoration: none;
 }
 
+.navItem {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
 
+.dropdown-title.navItem.NavbarActive {
+  color: #fff;
+}
 
+.IntNavListActive {
+  color: #fff !important;
+  background: #cb9f27 !important;
+}
 
+.country-button {
+  border-radius: 5px !important;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
 
 
 
@@ -27,6 +51,16 @@
     height: auto;
     display: grid;
     place-items: center;
+}
+
+.logo > a {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    color: #000;
+    text-decoration: none;
+    font-family: "Unbounded", sans-serif;
+    font-style: normal;
 }
   
   .logo img {
@@ -77,12 +111,13 @@
   .dropdown-content {
     position: absolute;
     top: 100%;
-    left: 0;
+    left: -10px !important;
     display: none;
     flex-direction: column;
-    background-color: white;
+    background-color: red;
     padding: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
     z-index: 999;
     min-width: 160px;
   }
@@ -92,6 +127,7 @@
     color: #333;
     text-decoration: none;
     transition: background 0.3s;
+    border-radius: 5px;
   }
   
   .dropdown-content a:hover {
@@ -321,4 +357,53 @@
   width: 100%;
   height: auto;
   border-radius: 3px;
+}
+
+
+.None {
+  display: none;
+  pointer-events: none;
+}
+
+.contact-button-link {
+  display: inline-block;
+  background: linear-gradient(to right, #ff1744, #d50000);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-button-link:hover {
+  opacity: 80%;
+}
+
+#phone-icon {
+  margin-right: 5px !important;
+}
+
+.header.ScrollHeader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  animation: animateHeader 0.2s linear 1;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes animateHeader {
+  0% {
+    top: 15px;
+  }
+  100% {
+    top: 0;
+  }
 }

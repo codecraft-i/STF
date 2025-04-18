@@ -4,7 +4,7 @@ import profileImg from "@assets/Logo.png";
 
 const About = () => {
   return (
-    <section className="author-section">
+    <section className="author-section" id="about">
       {/* Bezak shakllar */}
       <div className="shape1"></div>
       <div className="shape2"></div>
@@ -16,12 +16,8 @@ const About = () => {
           <img src={profileImg} alt="Prof. Sophia" className="author-image" />
         </div>
         <div className="author-text">
-          <h5 className="author-subtitle">Meet Author</h5>
-          <h2 className="author-title">Prof. Sophia</h2>
-          <p className="author-desc">
-            This is an ebook landing page template with Bootstrap 5 CSS framework.
-            It is easy to customize with the use of Bootstrap CSS classes.
-          </p>
+          <h5 className="author-subtitle">STF CONSULTING Asoschisi</h5>
+          <h2 className="author-title">SARVAR</h2>
           <p className="author-desc">
           Men — Toshmamatov Sarvarjon, STF_CONSULTING   firmasi asoschisiman , 5 yildan ortiq vaqt davomida Koreyada bo'lganman 93 dan ortiq talabalarni Janubiy Koreyadagi oliygohlarga muvaffaqiyatli tarzda yuborishga hissa qo‘shdim.
 
