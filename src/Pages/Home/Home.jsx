@@ -17,6 +17,14 @@ import About from "@components/About/About"
 import Services from "@components/Services/Services"
 import Partniors from "@components/Partniors/Partniors"
 
+import StdResults from "@components/StdResults/StdResults"
+import visa1 from "@assets/HomeAssests/visa1.jpg";
+import visa2 from "@assets/HomeAssests/visa2.jpg";
+import visa3 from "@assets/HomeAssests/visa3.jpg";
+import visa4 from "@assets/HomeAssests/visa4.jpg";
+import visa5 from "@assets/HomeAssests/visa5.jpg";
+import visa6 from "@assets/HomeAssests/visa6.jpg";
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -33,6 +41,9 @@ const Home = () => {
         once: true,    // faqat bir marta ishlasin scrollda
       });
     }, []);
+    
+    const cards = [visa1, visa2, visa3, visa4, visa5, visa6];
+
     return (
         <div className="home-container">
             <div className="homeIntroBox">
@@ -80,6 +91,15 @@ const Home = () => {
               <TopUni />
               <About />
               <Partniors />
+
+                <div className="app-container">
+                  <h1 className="title">2025-YIL BAHORGI SEMESTR NATIJALARI</h1>
+                  <div className="card-grid">
+                    {cards.map((visa, index) => (
+                      <StdResults key={index} visa={visa} />
+                    ))}
+                  </div>
+                </div>
             </div>
       </div>
     );
