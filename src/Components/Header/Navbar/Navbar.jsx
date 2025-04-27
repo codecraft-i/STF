@@ -157,29 +157,69 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="mobile-menu">
           <button className="close-btn" onClick={() => setIsMenuOpen(false)}><FiX /></button>
+          <div className="custom-select-wrapper">
+        <select
+          className="custom-select"
+          value={i18n.language}
+          onChange={handleLanguageChange}
+        >
+          {languages.map((lang) => (
+            <option key={lang.code} value={lang.code}>
+              {lang.label}
+            </option>
+          ))}
+        </select>
 
-          <NavLink to="/" onClick={() => setIsMenuOpen(false)}>{t('home')}</NavLink>
-          <NavLink to="/" onClick={() => setIsMenuOpen(false)}>{t('about_us')}</NavLink>
-          
-          <span className="dropdown-title">Koreyada ta'lim</span>
-          <NavLink to="/til-kursi" onClick={() => setIsMenuOpen(false)}>Til kursi</NavLink>
-          <NavLink to="/kasbiy-talim" onClick={() => setIsMenuOpen(false)}>Kasbiy ta'lim</NavLink>
-          <NavLink to="/bakalavr" onClick={() => setIsMenuOpen(false)}>Bakalavr</NavLink>
-          <NavLink to="/magistratura" onClick={() => setIsMenuOpen(false)}>Magistratura</NavLink>
+        <div className="select-flag">
+          <img
+            src={languages.find((l) => l.code === i18n.language)?.flag}
+            alt="flag"
+          />
+        </div>
+    </div>
 
-          <span className="dropdown-title">{t("select_country")}</span>
-          {countries.map(country => {
-            const translatedName = countryTranslations[country.name]?.[i18n.language] || country.name;
-            return (
-              <button
-                key={country.id}
-                onClick={() => handleCountryClick(country.name)}
-                className="country-button"
-              >
-                {translatedName}
-              </button>
-            );
-          })}
+    <NavLink to="/" className={({ isActive }) => isActive ? "NavbarActive" : "navItem"}>{t('home')}</NavLink>
+        <Link to="about" smooth={true} duration={500} className={isHiddenPage ? "None" : "navItem"}>{t('about_us')}</Link>
+
+
+        <div className="dropdown">
+          <div className="dropdown-hover-area">
+            <span className={`dropdown-title navItem ${isHiddenPage ? "NavbarActive" : ""}`}>
+              {t("edu_in_karelia")}
+              <span className="arrow">▼</span>
+            </span>
+            <div className="dropdown-content">
+              <NavLink to="/bachelor" className={({ isActive }) => isActive ? "IntNavListActive" : "" }>{t('bachelor')}</NavLink>
+              <NavLink to="/master" className={({ isActive }) => isActive ? "IntNavListActive" : "" }>{t('master')}</NavLink>
+              <NavLink to="/languagecourse" className={({ isActive }) => isActive ? "IntNavListActive" : "" }>{t('language_course')}</NavLink> 
+              <NavLink to="/vocationaleducation" className={({ isActive }) => isActive ? "IntNavListActive" : "" }>{t('vocational_education')}</NavLink>
+            </div>
+          </div>
+        </div>
+
+        <div className="dropdown">
+          <div className="dropdown-hover-area">
+            <span className="dropdown-title">
+              <NavLink to="/universities" className={({ isActive }) => isActive ? "NavbarActive" : "navItem"}>{t("universities")}</NavLink>
+              <span className="arrow">▼</span>
+            </span>
+            <div className="dropdown-content">
+              {countries.map(country => {
+                const translatedName = countryTranslations[country.name]?.[i18n.language] || country.name;
+                return (
+                  <button
+                    key={country.id}
+                    onClick={() => handleCountryClick(country.name)}
+                    className="country-button"
+                  >
+                    {translatedName}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+
         </div>
       )}
     </header>
