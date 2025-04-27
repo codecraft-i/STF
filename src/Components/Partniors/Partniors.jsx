@@ -1,35 +1,39 @@
 import { useEffect, useRef } from "react";
 import "./Partniors.css";
 
+import { useTranslation } from 'react-i18next';
+
 const partners = [
   {
     name: "University of South Wales",
-    img: "https://upload.wikimedia.org/wikipedia/en/thumb/4/4d/University_of_South_Wales_Logo.svg/1920px-University_of_South_Wales_Logo.svg.png"
+    img: "public/images/PrtsLogo/prts1.png"
   },
   {
     name: "APU",
-    img: "https://www.apu.edu.my/sites/all/themes/apu/images/logo.png"
+    img: "public/images/PrtsLogo/prts2.svg"
   },
   {
     name: "INTI",
-    img: "https://upload.wikimedia.org/wikipedia/en/thumb/7/7f/INTI_International_University_%26_Colleges_logo.svg/1200px-INTI_International_University_%26_Colleges_logo.svg.png"
+    img: "public/images/PrtsLogo/prts3.png"
   },
   {
     name: "UCSI University",
-    img: "https://upload.wikimedia.org/wikipedia/en/thumb/3/37/UCSI_University_logo.svg/1200px-UCSI_University_logo.svg.png"
+    img: "public/images/PrtsLogo/prts4.png"
   },
   {
     name: "Edinburgh Napier University",
-    img: "https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Edinburgh_Napier_University_logo.svg/2560px-Edinburgh_Napier_University_logo.svg.png"
+    img: "public/images/PrtsLogo/prts5.svg"
   },
   {
     name: "Birmingham City University",
-    img: "https://upload.wikimedia.org/wikipedia/en/thumb/d/d0/Birmingham_City_University_logo.svg/2560px-Birmingham_City_University_logo.svg.png"
+    img: "public/images/PrtsLogo/prts"
   }
 ];
 
 export default function Partniors() {
   const carouselRef = useRef(null);
+
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -50,8 +54,8 @@ export default function Partniors() {
 }, []);
 
   return (
-    <div className="hamkorlar-container">
-      <h2 className="hamkorlar-title">HAMKORLARIMIZ</h2>
+    <div className="prts-container" style={{ margin: "20px 0" }}>
+      <h2 className="prts-title" style={{ color: "#eee" }}>{t('our_partners')}</h2>
       <div className="carousel" ref={carouselRef}>
         {partners.map((partner, idx) => (
           <div key={idx} className="partner-box">

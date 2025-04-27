@@ -4,6 +4,10 @@
   background: none;
   padding: 40px 20px;
   color: white;
+
+  text-decoration: none;
+  font-family: "Unbounded", sans-serif;
+  font-style: normal;
 }
 
 .stats-grid {

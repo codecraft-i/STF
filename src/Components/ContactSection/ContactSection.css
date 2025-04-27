@@ -1,5 +1,6 @@
 .contact-section {
-  background-color: #f0f8ff;
+  background: linear-gradient(45deg, #283048, #304352);
+  border-radius: 20px;
   padding: 40px 20px;
   font-family: Arial, sans-serif;
 }

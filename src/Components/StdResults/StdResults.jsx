@@ -3,8 +3,12 @@ import React, { useState } from "react";
 import bg from "@assets/HomeAssests/bgResults.jpeg";
 import "./StdResults.css";
 
+import { useTranslation } from 'react-i18next';
+
 function StdResults({ visa }) {
   const [showModal, setShowModal] = useState(false);
+
+  const { t, i18n } = useTranslation();
 
   return (
     <>
@@ -13,9 +17,9 @@ function StdResults({ visa }) {
         style={{ backgroundImage: `url(${bg})` }}
         onClick={() => setShowModal(true)}
       >
-        <div className="visa-title">VIZA MUBORAK!</div>
+        <div className="visa-title">{t('visa_congratulations')}</div>
         <img src={visa} alt="Visa Document" className="visa-image" />
-        <div className="visa-footer">KASBIY TA'LIM</div>
+        <div className="visa-footer" style={{ textTransform: "uppercase" }}>{t('bachelor')}</div>
       </div>
 
       {showModal && (

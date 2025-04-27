@@ -1,12 +1,18 @@
 import React, { useEffect, useRef } from 'react';
 import './results.css';
 
+// Translation module
+import { useTranslation } from 'react-i18next';
+
 const Results = () => {
+  // Tranlations
+  const { t, i18n } = useTranslation();
+
   const stats = [
-    { value: "100+", description: "Chet elda o‘qiyotgan talabalar" },
-    { value: "5+", description: "Ta’lim sohasida yillik tajriba" },
-    { value: "$1 mln", description: "O‘quvchilarimizning olgan umumiy stipendiyasi" },
-    { value: "100%", description: "Universitetga qabul qilinish kafolati" },
+    { value: "100+", description: t('study_international') },
+    { value: "5+", description: t('std_2') },
+    { value: "$1 mln", description: t('std_3') },
+    { value: "100%", description: t('std_4') },
   ];
 
   const cardsRef = useRef([]);

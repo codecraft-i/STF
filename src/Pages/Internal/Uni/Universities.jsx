@@ -3,9 +3,15 @@ import { Link, useLocation } from "react-router-dom";
 import axios from "axios";
 import Header from "@components/Header/Header/Header";
 
+import Footer from "@components/Footer/Footer"
+
 import './universities.css'
+import { useTranslation } from 'react-i18next';
+import { countryTranslations } from "../../../translations/countryTranslations";
 
 const Universities = () => {
+  const { t, i18n } = useTranslation();
+
   const [universities, setUniversities] = useState([]);
   const [countries, setCountries] = useState([]);
   const [selectedCountries, setSelectedCountries] = useState([]);
@@ -57,102 +63,93 @@ const Universities = () => {
   return (
     <>
       <Header />
-      <div className="p-4">
-        <h2 className="text-xl font-bold mb-4">Filter by Country</h2>
-        <div className="mb-4">
-          {countries.map((country) => (
-            <label key={country.id} className="mr-4">
-              <input
-                type="checkbox"
-                checked={selectedCountries.includes(country.name)}
-                onChange={() => handleCheckboxChange(country.name)}
-              />{" "}
-              {country.name}
-            </label>
-          ))}
+      <div className="page-container">
+        <div className="sidebar">
+          <h2 style={{ color: "#eee" }}>{t('states')}</h2>
+          {countries.map((country) => {
+            const translatedName = countryTranslations[country.name]?.[i18n.language] || country.name;
+            
+            return (
+              <label key={country.id}>
+                <input
+                  type="checkbox"
+                  checked={selectedCountries.includes(country.name)}
+                  onChange={() => handleCheckboxChange(country.name)}
+                />
+                {translatedName}
+              </label>
+            );
+          })}
         </div>
 
-        {/* Filter tanlangan davlatlar bo'yicha ko'rsatish */}
-        <div className="filter-wrapper bg-blue-900 text-white p-3 rounded-lg mb-4">
-          <p>Found: {filteredUniversities.length}</p>
-          <div className="flex flex-wrap gap-2 mt-2">
-            {selectedCountries.map((country) => (
-              <div
-                key={country}
-                className="bg-blue-700 text-white px-3 py-1 rounded-full flex items-center"
-              >
-                <span>{country}</span>
-                <button
-                  className="ml-2 text-gray-300 hover:text-white"
-                  onClick={() => handleCheckboxChange(country)}
-                >
-                  ×
-                </button>
-              </div>
-            ))}
-          </div>
-          {selectedCountries.length > 0 && (
-            <button
-              className="mt-2 text-gray-300 hover:underline"
-              onClick={() => setSelectedCountries([])}
-            >
-              Clear all
-            </button>
-          )}
-        </div>
-
-        {filteredUniversities.length === 0 ? (
-          <p>No universities found for selected country.</p>
-        ) : (
-          <div className="uniBox">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {visibleUniversities.map((uni) => (
-                <div key={uni.id} className="border p-4 rounded shadow relative">
-                  {uni.short_info.length > 0 && (
-                    <div className="absolute top-2 left-2 flex gap-2">
-                      {uni.short_info.map((info) => (
-                        <div
-                          key={info.id}
-                          className="text-white text-xs font-bold px-2 py-1 rounded"
-                          style={{ backgroundColor: info.bgColor }}
-                        >
-                          <span style={{ color: info.fontColor }}>{info.name}</span>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-
-                  <img
-                    src={uni.image}
-                    alt={uni.name}
-                    id="uniImg"
-                    className="w-full h-40 object-cover rounded"
-                  />
-                  <h3 className="text-lg font-bold mt-2">{uni.name}</h3>
-                  <p className="text-sm text-gray-600">Ranking: {uni.ranking}</p>
-                  <Link
-                    to={`/universities/university/${encodeURIComponent(uni.name)}`}
-                    className="text-blue-500 hover:underline"
-                  >
-                    More Info
-                  </Link>
-                </div>
-              ))}
+        <div className="uniBox">
+          <div className="filter-wrapper">
+            <p>{t('found')}: {filteredUniversities.length}</p>
+            <div className="badge-container">
+              {selectedCountries.map((country) => {
+                const translatedName = countryTranslations[country]?.[i18n.language] || country;
+                
+                return (
+                  <div className="badge" key={country}>
+                    {translatedName}
+                    <button onClick={() => handleCheckboxChange(country)}>×</button>
+                  </div>
+                );
+              })}
             </div>
-
-            {/* Load More tugmasi faqat hamma universitetlar chiqarilmaganda ko‘rinadi */}
-            {visibleCount < filteredUniversities.length && (
-              <div className="text-center mt-4">
-                <button
-                  onClick={loadMore}
-                  className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-                >
-                  Load More
-                </button>
-              </div>
+            {selectedCountries.length > 0 && (
+              <button
+                className="clear-btn"
+                onClick={() => setSelectedCountries([])}
+              >
+                {t('clear_all')}
+              </button>
             )}
           </div>
-        )}
+
+          {filteredUniversities.length === 0 ? (
+            <p>No universities found for selected country.</p>
+          ) : (
+            <>
+              <div className="uni-grid">
+                {visibleUniversities.map((uni) => (
+                  <div className="uni-card" key={uni.id}>
+                    {uni.short_info.length > 0 && (
+                      <div className="short-info">
+                        {uni.short_info.map((info) => (
+                          <div
+                            key={info.id}
+                            className="short-info-item"
+                            style={{
+                              backgroundColor: info.bgColor,
+                              color: info.fontColor,
+                            }}
+                          >
+                            {info.name}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                    <img src={uni.image} alt={uni.name} className="uni-img" />
+                    <h3 className="uni-name">{uni.name}</h3>
+                    <p className="uni-ranking">{t('ranking')}: {uni.ranking}</p>
+                    <Link to={`/universities/university/${encodeURIComponent(uni.name)}`} className="uni-link">
+                      {t('more_details')}
+                    </Link>
+                  </div>
+                ))}
+              </div>
+
+              {visibleCount < filteredUniversities.length && (
+                <div className="load-more-container">
+                  <button onClick={loadMore} className="load-more-button">
+                    Load More
+                  </button>
+                </div>
+              )}
+            </>
+          )}
+        </div>
       </div>
     </>
   );

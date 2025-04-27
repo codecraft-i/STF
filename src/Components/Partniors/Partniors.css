@@ -1,14 +1,18 @@
-.hamkorlar-container {
-    background: linear-gradient(to right, #003366, #4682b4);
+.prts-container {
+    background: none;
     padding: 40px 20px;
     text-align: center;
     color: white;
   }
   
-  .hamkorlar-title {
+  .prts-title {
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 24px;
+
+    text-decoration: none;
+    font-family: "Unbounded", sans-serif;
+    font-style: normal;
   }
   
   .carousel {
@@ -27,12 +31,12 @@
     flex-shrink: 0;
     width: 260px;
     height: 130px;
-    background-color: white;
+    background: none;
     border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); */
   }
   
   .partner-box img {
@@ -48,7 +52,7 @@
       height: 100px;
     }
   
-    .hamkorlar-title {
+    .prts-title {
       font-size: 24px;
     }
   }
@@ -59,7 +63,7 @@
       height: 90px;
     }
   
-    .hamkorlar-title {
+    .prts-title {
       font-size: 20px;
     }
   }

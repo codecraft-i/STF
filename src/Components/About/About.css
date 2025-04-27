@@ -5,6 +5,10 @@
   justify-content: center;
   position: relative;
   overflow: hidden;
+
+  text-decoration: none;
+  font-family: "Unbounded", sans-serif;
+  font-style: normal;
 }
 
 .author-section::before,

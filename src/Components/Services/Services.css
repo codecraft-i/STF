@@ -9,10 +9,20 @@
   gap: 1.5rem;
   justify-content: center;
   align-items: center;
+
+  text-decoration: none;
+  font-family: "Unbounded", sans-serif;
+  font-style: normal;
+}
+#title-services {
+  text-decoration: none;
+  font-family: "Unbounded", sans-serif;
+  font-style: normal;
+  margin-top: 40px !important;
 }
 
 .card {
-  background-color: white;
+  background: linear-gradient(45deg, #cb9f27 1%, #283E51 10%);
   border-radius: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 1.5rem;
@@ -27,12 +37,12 @@
 .card-title {
   font-size: 1.25rem;
   font-weight: 600;
-  color: black;
+  color: #eee;
   margin-bottom: 1.5rem;
 }
 
 .card-button {
-  background-color: #ff5e68;
+  background: linear-gradient(to right, #ff1744, #d50000);
   color: #eee;
   text-align: center;
   padding: 0.75rem;
@@ -42,7 +52,7 @@
 }
 
 .card-button:hover {
-  background-color: #ff7780;
+  opacity: 80%;
 }
 
 /* Responsive tweaks */

@@ -91,10 +91,10 @@ const Navbar = () => {
               <span className="arrow">▼</span>
             </span>
             <div className="dropdown-content">
-              <NavLink to="/bachelor" className={({ isActive }) => isActive ? "IntNavListActive" : "" }>Bakalavr</NavLink>
-              <NavLink to="/master" className={({ isActive }) => isActive ? "IntNavListActive" : "" }>Magistratura</NavLink>
-              <NavLink to="/languagecourse" className={({ isActive }) => isActive ? "IntNavListActive" : "" }>Til kursi</NavLink> 
-              <NavLink to="/vocationaleducation" className={({ isActive }) => isActive ? "IntNavListActive" : "" }>Kasbiy ta'lim</NavLink>
+              <NavLink to="/bachelor" className={({ isActive }) => isActive ? "IntNavListActive" : "" }>{t('bachelor')}</NavLink>
+              <NavLink to="/master" className={({ isActive }) => isActive ? "IntNavListActive" : "" }>{t('master')}</NavLink>
+              <NavLink to="/languagecourse" className={({ isActive }) => isActive ? "IntNavListActive" : "" }>{t('language_course')}</NavLink> 
+              <NavLink to="/vocationaleducation" className={({ isActive }) => isActive ? "IntNavListActive" : "" }>{t('vocational_education')}</NavLink>
             </div>
           </div>
         </div>
