@@ -5,6 +5,9 @@ import MasterStudyTringle from "@components/MasterItems/MasterStudyTringle"
 import PageIntroMaster from "@components/MasterItems/PageIntroMaster";
 import MasterDocs from "@components/MasterItems/MasterDocs";
 
+import ContactForm from "@components/ContactItems/ContactForm"
+import ContactSection from "@components/ContactSection/ContactSection"
+
 export default function Master() {
     return (
         <>
@@ -12,6 +15,11 @@ export default function Master() {
           <PageIntroMaster />
           <MasterStudyTringle />
           <MasterDocs />
+	  
+	  <div className='baseContactSendingBox'>
+            <ContactForm />
+          </div>
+          <ContactSection />
           <Footer />
         </>
     )

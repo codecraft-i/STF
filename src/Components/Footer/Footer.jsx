@@ -22,9 +22,9 @@ export default function Footer() {
           </div>
           <p className="social-title">{t('social_media')}:</p>
           <div className="social-icons">
-            <a href="https://www.instagram.com/stf_consultinguz/" target="_blank" style={{ color: "#00aaff" }}><img src="/public/Icons/instagram.png" alt="Instagram" /></a>
-            <a href="https://t.me/stf_consulting" target="_blank" style={{ color: "#00aaff" }}><img src="/public/Icons/telegram.png" alt="Telegram" /></a>
-            <a href="https://www.facebook.com/sarvar.toshmamatov.1/" target="_blank" style={{ color: "#00aaff", background: "#eee", width: "auto", height: "24px", backgroundSize: "cover", borderRadius: "5px" }}><img src="/public/Icons/facebook.png" alt="Facebook" /></a>
+            <a href="https://www.instagram.com/stf_consultinguz/" target="_blank" style={{ color: "#00aaff" }}><img src="/Icons/instagram.png" alt="Instagram" /></a>
+            <a href="https://t.me/stf_consulting" target="_blank" style={{ color: "#00aaff" }}><img src="/Icons/telegram.png" alt="Telegram" /></a>
+            <a href="https://www.facebook.com/sarvar.toshmamatov.1/" target="_blank" style={{ color: "#00aaff", background: "#eee", width: "auto", height: "24px", backgroundSize: "cover", borderRadius: "5px" }}><img src="/Icons/facebook.png" alt="Facebook" /></a>
           </div>
         </div>
 

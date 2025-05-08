@@ -17,10 +17,13 @@ import LanguageCourse from './Pages/Studies/LanguageCourse';
 import Master from './Pages/Studies/Master';
 import VocationalEducation from './Pages/Studies/VocationalEducation';
 
+import ContactButton from "@components/ContactButton/ContactButton"
+
 
 function App() {
   return (
     <>
+      <ContactButton />
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />

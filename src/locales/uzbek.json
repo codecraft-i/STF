@@ -70,7 +70,11 @@
     "photo": "Rasm 3.5×4.5 (2 dona)",
     "certificate_translation": "Shahodatnoma/diplom/attestat apostilli Korea Pro Viza Consulting tomonidan tarjima qilinadi",
     "bank_statement": "KDB bankdan ma'lumotnoma pul 1 oy turganligi to'g'risida ma'lumotnoma:\n- 16 000$ Seul, Gyeongi va Inchon uchun\n- 13 000$ qolgan hududlar uchun",
-    "language_certificate": "Til sertifikati:\n- TOPIK 4\n- IELTS 5.5 (Listening va Reading qismlari 5.5 kam bo'lmasligi kerak)",
+    "bank_statement_MASTER": "KDB bank shot ❌ \nYillik daromad ❌",
+    "language_certificate": "Til sertifikati:\n- TOPIK 3\n- IELTS 5.5 (Listening va Reading qismlari 5.5 kam bo'lmasligi kerak)",
+    "language_certificate_MASTER": "Til sertifikati:\n TOPIKsiz va Topik 3",
+    "language_certificate_VE": "Til sertifikati:\n- TOPIK 2\n- IELTS 5.5 (Listening va Reading qismlari 5.5 kam bo'lmasligi kerak)",
+    "language_certificate_LC": "Til sertifikati: \nTil bilishi shart emas agar TOPIK bulsa juda yaxshi",
     "birth_certificate_copy": "Tug'ilganlik guvohnomasi (metrika) nusxasi",
     "parents_passport_copy": "Ota-ona passport nusxasi",
     "parents_income_documents": "Ota-ona rasmiy daromadini ko'rsatuvchi hujjatlar:\n- Ota-ona yillik daromadi haqida ma'lumotnoma (mygov.uz saytidan)\n- Ota-ona mehnat daftarchasidan ko'chirma (mygov.uz saytidan)\n- Agarda ota-ona rasmiy daromadi mavjud bo'lmasadan tadbirkorlik yoki qishloq xo'jaligida band bo'lsa unda:\n  • Tadbirkorlik guvohnomasi, bankdan aylama va qolqich ko'rsatilgan ma'lumotnoma\n  • Mol-mulk va yer maydonlari egalik huquqini ko'rsatuvchi ma'lumotnoma (mygov.uz saytidan)\n  • Bankda hisob raqamida mablag' mavjudligi to'g'risida ma'lumotnoma (bu ma'lumotnoma faqat qo'shimcha sifatida daromad ko'rsatilsa berilishi mumkin uzi shart emas)",
@@ -87,7 +91,7 @@
     "language_requirements": "Til talablari",
 
     "topik": "TOPIK (Test of Proficiency in Korean)",
-    "topik_requirement": "Ko‘pchilik universitetlar TOPIK 4 yoki 5 darajasini talab qiladi",
+    "topik_requirement": "Topiksiz va Topik 3",
     "ielts_toefl": "IELTS/TOEFL",
     "ielts_requirement": "Agar dastur ingliz tilida bo‘lsa, IELTS 5.5 yoki undan yuqori ball talab qilinishi mumkin",
 

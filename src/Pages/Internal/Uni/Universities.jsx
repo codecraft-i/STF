@@ -20,13 +20,13 @@ const Universities = () => {
   const location = useLocation();
 
   useEffect(() => {
-    axios.get("http://localhost:8000/api/countries/")
+    axios.get("https://stfconsulting.uz/site/api/countries/")
       .then(response => {
         setCountries(response.data);
       })
       .catch(error => console.error("Error fetching countries:", error));
 
-    axios.get("http://localhost:8000/api/universities/")
+    axios.get("https://stfconsulting.uz/site/api/universities/")
       .then(response => setUniversities(response.data.data))
       .catch(error => console.error("Error fetching universities:", error));
 

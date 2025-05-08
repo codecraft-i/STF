@@ -6,27 +6,27 @@ import { useTranslation } from 'react-i18next';
 const partners = [
   {
     name: "University of South Wales",
-    img: "public/images/PrtsLogo/prts1.png"
+    img: "/images/PrtsLogo/prts1.png"
   },
   {
     name: "APU",
-    img: "public/images/PrtsLogo/prts2.svg"
+    img: "/images/PrtsLogo/prts2.svg"
   },
   {
     name: "INTI",
-    img: "public/images/PrtsLogo/prts3.png"
+    img: "/images/PrtsLogo/prts3.png"
   },
   {
     name: "UCSI University",
-    img: "public/images/PrtsLogo/prts4.png"
+    img: "/images/PrtsLogo/prts4.png"
   },
   {
     name: "Edinburgh Napier University",
-    img: "public/images/PrtsLogo/prts5.svg"
+    img: "/images/PrtsLogo/prts5.svg"
   },
   {
     name: "Birmingham City University",
-    img: "public/images/PrtsLogo/prts"
+    img: "/images/PrtsLogo/prts6.png"
   }
 ];
 

@@ -32,6 +32,13 @@ import ContactForm from "@components/ContactItems/ContactForm"
 
 import { motion, AnimatePresence } from "framer-motion";
 
+import ImageSlider from '@components/ImageSlider/ImageSlider'
+const imageList = [
+  "./std3.png",
+  "./std2.jpg",
+  "./std2.jpg",
+];
+
 // Icons
 import { IoClose } from "react-icons/io5";
 
@@ -98,10 +105,11 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="hero-image">
-                  <img
+                  {/* <img
                     src={ eduImage }
                     alt="Graduation Hat"
-                  />
+                  /> */}
+                  <ImageSlider images={imageList} />
                 </div>
               </div>
 

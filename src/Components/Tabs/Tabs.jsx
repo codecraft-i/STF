@@ -9,7 +9,7 @@ export default function Tabs({ university }) {
       case "PROGRAMMES":
         return (
           <div className="tab-content">
-            <img src="https://static.tildacdn.one/tild3861-3931-4334-a464-663535353632/programmes-min.png" alt="programmes" className="tab-img" />
+            <img src="/Packs/pic3.png" className="tab-img" />
             <div>
               {university.programme_set.map((program, i) => (
                 <div key={i}>
@@ -27,7 +27,7 @@ export default function Tabs({ university }) {
       case "SCHOLARSHIPS":
         return (
           <div className="tab-content">
-            <img src="https://static.tildacdn.one/tild3237-3635-4563-b563-636331303833/scholarships-min.png" alt="scholarships" className="tab-img" />
+            <img src="/Packs/pic2.png" class="tab-img" />
             <div>
               {university.scholarship_set.map((scholarship, i) => (
                 <div key={i}>
@@ -45,7 +45,7 @@ export default function Tabs({ university }) {
       case "REQUIREMENTS":
         return (
           <div className="tab-content">
-            <img src="https://static.tildacdn.one/tild6136-6161-4837-b466-363166306639/ruqiere-min.png" alt="requirements" className="tab-img" />
+            <img src="/Packs/pic1.png" alt="requirements" className="tab-img" />
             <div>
               {university.requirement_set.map((requirement, i) => (
                 <div key={i}>

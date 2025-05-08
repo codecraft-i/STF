@@ -1,4 +1,9 @@
 /* Umumiy konteyner */
+.sendDataH2Title {
+  text-decoration: none;
+  font-family: "Unbounded", sans-serif;
+  font-style: normal;
+}
 .phone-container {
   position: relative;
   display: flex;
@@ -9,10 +14,6 @@
   border-radius: 30px;
   gap: 10px;
   flex-wrap: nowrap; /* Ensures no wrapping */
-
-    text-decoration: none;
-    font-family: "Unbounded", sans-serif;
-    font-style: normal;
 }
 
 /* Tanlangan davlat (chapdagi flag + kod) */
@@ -47,9 +48,6 @@ input[type="text"] {
   border-radius: 30px;
   background-color: #ffffff;
   font-size: 16px;
-  text-decoration: none;
-  font-family: "Unbounded", sans-serif;
-  font-style: normal;
 }
 
 /* Dropdown */

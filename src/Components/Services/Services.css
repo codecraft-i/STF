@@ -34,7 +34,9 @@
   justify-content: space-between;
 }
 
-.card-title {
+.card-title,
+.baseCardTitle,
+#baseCardTitle {
   font-size: 1.25rem;
   font-weight: 600;
   color: #eee;

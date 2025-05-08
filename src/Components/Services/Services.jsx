@@ -9,10 +9,10 @@ const Services = () => {
   const { t, i18n } = useTranslation();
   
   const cards = [
-    { title: t('bachelor_education_in_korea'), link: "/bachelor" },
-    { title: t('master_education_in_korea'), link: "/master" },
-    { title: t('language_courses'), link: "/languagecourse" },
-    { title: t('professional_education'), link: "/vocationaleducation" },
+    { id: 1, title: t('bachelor_education_in_korea'), link: "/bachelor" },
+    { id: 2, title: t('master_education_in_korea'), link: "/master" },
+    { id: 3, title: t('language_courses'), link: "/languagecourse" },
+    { id: 4, title: t('professional_education'), link: "/vocationaleducation" },
   ];
   
   return (
@@ -21,8 +21,8 @@ const Services = () => {
       <div className="cards-container" data-aos="fade-down">
         {cards.map((card, index) => (
           <div key={index} className="card">
-            <h2 className="card-title">{card.title}</h2>
-            <Link to={card.link} className="card-button">
+            <h2 className="baseCardTitle" id="baseCardTitle" style={{ color: "#eee !important" }}>{card.title}</h2>
+            <Link to={card.link} className="card-button" style={ card.id === 3 || card.id === 2 ? {background: "#1c4d9a"} : undefined }>
               {t('more_information')}
             </Link>
           </div>

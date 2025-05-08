@@ -14,7 +14,7 @@ const University = () => {
   const [university, setUniversity] = useState(null);
 
   useEffect(() => {
-    axios.get("http://localhost:8000/api/universities/")
+    axios.get("https://stfconsulting.uz/site/api/universities/")
       .then(response => {
         const foundUniversity = response.data.data.find(uni => uni.name === university_name);
         setUniversity(foundUniversity);

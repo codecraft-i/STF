@@ -69,7 +69,10 @@
     "photo": "Photo 3.5×4.5 (2 pieces)",
     "certificate_translation": "Certificate/diploma/attestat apostilled and translated by Korea Pro Visa Consulting",
     "bank_statement": "Bank statement from KDB Bank confirming 1-month deposit:\n- $16,000 for Seoul, Gyeonggi, and Incheon\n- $13,000 for other regions",
-    "language_certificate": "Language Certificate:\n- TOPIK 4\n- IELTS 5.5 (minimum 5.5 in Listening and Reading sections)",
+    "language_certificate": "Language Certificate: \nTOPIK 3\n- IELTS 5.5 (minimum 5.5 in Listening and Reading sections)",
+    "language_certificate_MASTER": "Language Certificate: \nWithout a topic and TOPIK 3",
+    "language_certificate_LC": "Language Certificate: \nLanguage proficiency is not required, but having a TOPIK is a big advantage.",
+    "language_certificate_VE": "Language Certificate:\n- TOPIK 2\n- IELTS 5.5 (minimum 5.5 in Listening and Reading sections)",
     "birth_certificate_copy": "Copy of birth certificate",
     "parents_passport_copy": "Copy of parents' passports",
     "parents_income_documents": "Documents showing parents' official income:\n- Annual income certificate (from mygov.uz)\n- Work record extract (from mygov.uz)\n- If no official income but self-employed or farming:\n  • Business license, bank turnover and balance certificate\n  • Property and land ownership certificates (from mygov.uz)\n  • Bank account balance certificate (optional, additional document if needed)",
@@ -86,7 +89,7 @@
     "language_requirements": "Language requirements",
 
     "topik": "TOPIK (Test of Proficiency in Korean)",
-    "topik_requirement": "Most universities require TOPIK level 4 or 5",
+    "topik_requirement": "Without a topic and Topic 3",
     "ielts_toefl": "IELTS/TOEFL",
     "ielts_requirement": "If the program is in English, an IELTS score of 5.5 or higher may be required",
 

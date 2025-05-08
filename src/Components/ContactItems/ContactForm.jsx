@@ -16,7 +16,7 @@ const ContactForm = () => {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    axios.get("http://localhost:8000/api/certificates/")
+    axios.get("https://stfconsulting.uz/site/api/certificates/")
       .then((res) => setCertificates(res.data))
       .catch((err) => console.error("Certificate load error", err));
   }, []);
@@ -32,8 +32,16 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
+    const csrfToken = document.cookie.split(';').find(c => c.trim().startsWith('csrftoken=')).split('=')[1];
     try {
-      const res = await axios.post("http://localhost:8000/api/contact/", formData);
+      const res = await axios.post("https://stfconsulting.uz/site/api/contact/",
+      formData,
+      {
+        headers: {
+          'X-CSRFToken': csrfToken,  // CSRF tokenini yuborish
+        }
+      }
+      );
       setResponse(res.data);
     } catch (err) {
       console.error("Server xatosi:", err.response?.data || err.message);
@@ -55,7 +63,7 @@ const ContactForm = () => {
 
   return (
     <div className="sendDataForm">
-      <h2>{t('send_contact')}</h2>
+      <h2 className="sendDataH2Title"style={{ margin: "0 0 15px 0" }} >{t('send_contact')}</h2>
 
       {response ? (
         <div style={{ background: "#dff0d8", padding: 10, borderRadius: "10px" }}>

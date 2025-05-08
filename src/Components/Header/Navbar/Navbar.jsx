@@ -40,7 +40,7 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    axios.get("http://localhost:8000/api/countries/")
+    axios.get("https://stfconsulting.uz/site/api/countries/")
       .then(response => setCountries(response.data))
       .catch(error => console.error("Error fetching countries:", error));
   }, []);
@@ -78,7 +78,7 @@ const Navbar = () => {
     return (
         <>
         <header className={`header ${isScrolled ? "ScrollHeader" : ""}`}>
-        <div className="logo"><NavLink to="/"><img src={Logo} alt="Logo" style={{ margin: "0 5px 0 0" }} />STF CONSULTING</NavLink></div>
+        <div className="logo"><NavLink to="/"><img src={Logo} alt="Logo" style={{ margin: "0 5px 0 0" }} /><span className="logoItem1">STF</span><span className="logoItem2">CONSULTING</span></NavLink></div>
 
       <nav className="nav-links">
         <NavLink to="/" className={({ isActive }) => isActive ? "NavbarActive" : "navItem"}>{t('home')}</NavLink>

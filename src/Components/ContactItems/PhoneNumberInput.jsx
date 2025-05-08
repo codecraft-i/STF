@@ -14,7 +14,7 @@ const PhoneNumberInput = ({ phone, setPhone }) => {
   useEffect(() => {
     const fetchCountries = async () => {
       try {
-        const response = await fetch('http://localhost:8000/api/contact-countries/');
+        const response = await fetch('https://stfconsulting.uz/site/api/contact-countries/');
         const data = await response.json();
         console.log(data); // Ma'lumotlarni tekshirib chiqing
         setCountries(data);

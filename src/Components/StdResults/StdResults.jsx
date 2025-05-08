@@ -19,7 +19,7 @@ function StdResults({ visa }) {
       >
         <div className="visa-title">{t('visa_congratulations')}</div>
         <img src={visa} alt="Visa Document" className="visa-image" />
-        <div className="visa-footer" style={{ textTransform: "uppercase" }}>{t('bachelor')}</div>
+        <div className="visa-footer" style={{ textTransform: "uppercase" }}>TELEX VIZA</div>
       </div>
 
       {showModal && (

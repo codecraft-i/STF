@@ -6,6 +6,9 @@ import PageIntroLC from "@components/LanguageCourse/PageIntroLC"
 import LCStudyTringleStudyTringle from "@components/LanguageCourse/LCStudyTringleStudyTringle"
 import LCDocs from "@components/LanguageCourse/LCDocs"
 
+import ContactForm from "@components/ContactItems/ContactForm"
+import ContactSection from "@components/ContactSection/ContactSection"
+
 export default function LanguageCourse() {
     return (
         <>
@@ -13,6 +16,11 @@ export default function LanguageCourse() {
           <PageIntroLC />
           <LCStudyTringleStudyTringle />
           <LCDocs />
+	  
+	  <div className='baseContactSendingBox'>
+            <ContactForm />
+          </div>
+          <ContactSection />
           <Footer />
         </>
     )

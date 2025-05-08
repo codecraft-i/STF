@@ -9,6 +9,14 @@
     text-decoration: none;
 }
 
+.logoItem1 {
+  margin: 0 5px 0 0;
+  color: #1c4d9a;
+}
+.logoItem2 {
+  color: #ed1429;
+}
+
 .navItem {
   text-decoration: none;
   color: #000;

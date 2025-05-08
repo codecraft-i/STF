@@ -1,18 +1,32 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './VEDocs.css';
-
-import Logo from '@assets/Logo.png'
-
 import { useTranslation } from 'react-i18next';
+import html2canvas from 'html2canvas';
 
 const VEDocs = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
+  const docsListRef = useRef(null);
 
   const handleDownload = () => {
-    const link = document.createElement('a');
-    link.href = Logo;
-    link.download = 'Logo.png';
-    link.click();
+    const element = docsListRef.current;
+
+    // Vaqtincha colorni olib tashlash
+    const originalColor = element.style.color;
+    element.style.color = 'black'; // Yangi rangni o'rnatamiz
+
+    html2canvas(element).then((canvas) => {
+      // Canvasni tasvirga aylantiramiz
+      const imageUrl = canvas.toDataURL('image/png');
+      
+      // Yangi <a> elementini yaratamiz
+      const link = document.createElement('a');
+      link.href = imageUrl;
+      link.download = 'doclist.png'; // Rasmni yuklab olish uchun nom
+      link.click();
+
+      // Rangni original holatiga qaytarish
+      element.style.color = originalColor;
+    });
   };
 
   const documents = [
@@ -20,7 +34,7 @@ const VEDocs = () => {
     t('photo'),
     t('certificate_translation'),
     t('bank_statement'),
-    t('language_certificate'),
+    t('language_certificate_VE'),
     t('birth_certificate_copy'),
     t('parents_passport_copy'),
     t('parents_income_documents'),
@@ -33,7 +47,7 @@ const VEDocs = () => {
       <div className='h2-title-listDocs'>
         <h2 style={{ color: "#eee" }}>{t('vocational_training_visa_documents')}</h2>
       </div>
-      <div className="docs-wrapper">
+      <div className="docs-wrapper" ref={docsListRef}> {/* useRef yordamida ref qo'shildi */}
         {documents.map((doc, index) => (
           <div className="doc-item" key={index}>
             <div className="doc-badge">{index + 1}</div>

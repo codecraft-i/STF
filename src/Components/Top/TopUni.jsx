@@ -11,37 +11,37 @@ const games = [
     contry: 'Seul',
     title: 'Seoul National University (SNU)',
     redirect: '/universities/university/Seoul National University (SNU)',
-    image: '/public/images/UniversitiesPic/Seoul National University (SNU).jpg',
+    image: '/images/UniversitiesPic/Seoul National University (SNU).jpg',
   },
   {
     contry: 'Daejeon',
     title: 'Korea Advanced Institute of Science and Technology (KAIST)',
     redirect: '/universities/university/Korea Advanced Institute of Science and Technology (KAIST)',
-    image: '/public/images/UniversitiesPic/Korea Advanced Institute of Science and Technology (KAIST).jpg',
+    image: '/images/UniversitiesPic/Korea Advanced Institute of Science and Technology (KAIST).jpg',
   },
   {
     contry: 'Seul',
     title: 'Yonsei University',
     redirect: '/universities/university/Yonsei University',
-    image: '/public/images/UniversitiesPic/Yonsei University.jpg',
+    image: '/images/UniversitiesPic/Yonsei University.jpg',
   },
   {
     contry: 'Seul',
     title: 'Korea University',
     redirect: '/universities/university/Korea University',
-    image: '/public/images/UniversitiesPic/Korea University.png',
+    image: '/images/UniversitiesPic/Korea University.png',
   },
   {
     contry: 'Seul and Suvon',
     title: 'Sungkyunkwan University (SKKU)',
     redirect: '/universities/university/Sungkyunkwan University (SKKU)',
-    image: '/public/images/UniversitiesPic/Sungkyunkwan University (SKKU).PNG',
+    image: '/images/UniversitiesPic/Sungkyunkwan University (SKKU).PNG',
   },
   {
     contry: 'Seul',
     title: 'Kyung Hee University',
     redirect: '/universities/university/Kyung Hee University',
-    image: '/public/images/UniversitiesPic/Kyung Hee University.jpg',
+    image: '/images/UniversitiesPic/Kyung Hee University.jpg',
   }
 ];
 
